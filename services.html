@@ -30,7 +30,7 @@
           </ul>
         </nav>
         <div class="header__social">
-          <a href="#" class="header__button">Umów sie online</a>
+          <button type="button" class="header__button" data-modal-open>Umów sie online</button>
           <a href="https://www.instagram.com/studiofryzjerskiesandras/?igshid=YmMyMTA2M2Y%3D&fbclid=IwAR1yhbOelMkzCnTCyIUhW0o6qzJzeYqF1UNGWJkqDRZu4Qrjrf_NPMObYL4">
             <svg class="header__social__logo">
               <use
@@ -74,6 +74,86 @@
           </li>
         </ul>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal__close-button" data-modal-close>
+          <svg>
+            <use
+              xlink:href="./images/icons.svg#x"
+              width="11"
+              height="11"
+              x="8"
+              y="9"
+            ></use>
+          </svg>
+        </button>
+        <h6 class="modal__header">Zostaw swoje dane w formularzu poniżej</h6>
+
+        <label for="full-name" class="modal__hover">
+          Imie
+          <svg class="modal__icon modal__icon-position1">
+            <use
+              xlink:href="./images/icons.svg#person-logo"
+              width="12"
+              height="12"
+            ></use>
+          </svg>
+          <input
+            type="text"
+            name="user-name"
+            class="modal__input"
+            id="full-name"
+        /></label>
+
+        <label for="phone-number" class="modal__hover">
+          Telefon
+          <svg class="modal__icon modal__icon-position2">
+            <use
+              xlink:href="./images/icons.svg#phone-logo"
+              width="13"
+              height="13"
+            ></use>
+          </svg>
+          <input
+            type="tel"
+            name="phone-number"
+            class="modal__input"
+            id="phone-number"
+        /></label>
+
+        <label for="email" class="modal__hover">
+          Email
+          <svg class="modal__icon modal__icon-position3">
+            <use
+              xlink:href="./images/icons.svg#email2-logo"
+              width="15"
+              height="12"
+            ></use>
+          </svg>
+          <input type="email" name="email" class="modal__input" id="email"
+        /></label>
+
+        <label class="modal__hover">
+          Komentarz
+          <textarea
+            name="comment"
+            placeholder="Wprowadź tekst"
+            class="modal__input modal__comment"
+          ></textarea>
+        </label>
+
+        <label class="moda__terms-and-conditions">
+          <input type="checkbox" /> Oświadczam iż akceptuję
+          <a href="#" class="modal__links">Regulamin</a> i
+          <a href="#" class="modal__links">Politykę Prywatności.</a>
+        </label>
+
+        <label>
+          <button type="submit" class="modal__button">Wyślij</button>
+        </label>
+      </div>
+    </div>
   </body>
   <script src="./js/menu.js"></script>
+  <script src="./js/modal.js"></script>
 </html>
