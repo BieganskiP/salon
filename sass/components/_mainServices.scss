@@ -1,0 +1,30 @@
+main {
+  @include container;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0 30px 0;
+
+  & th,
+  & td {
+    padding: 10px;
+    font-weight: 700;
+  }
+  &__header {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 0 0;
+    text-decoration: underline;
+  }
+}
+@media (min-width: 768px) {
+  .main {
+    flex-direction: row;
+  }
+}

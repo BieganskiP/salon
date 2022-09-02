@@ -1,0 +1,27 @@
+footer {
+  width: 100%;
+  background-color: $primaryColor;
+}
+.footer {
+  @include container;
+  padding: 15px 20px;
+  color: $secondaryColor;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__logo {
+    @include logo;
+  }
+  &__contacts {
+    color: $secondaryColor;
+    &:hover {
+      color: $additionalColor;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@mixin container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@mixin logo {
+  background-image: linear-gradient(
+    to left,
+    #b88a44,
+    #f9f295dc,
+    #e0aa3e,
+    #e0aa3e,
+    #b88a44
+  );
+  background-clip: text;
+  color: transparent;
+  font-size: 2em;
+  font-family: $logo-font;
+}

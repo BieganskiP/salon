@@ -1,0 +1,92 @@
+header {
+  width: 100%;
+  background-color: $primaryColor;
+}
+.header {
+  @include container;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 15px;
+  &__logo {
+    @include logo;
+  }
+  &__mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    &__menu {
+      width: 2em;
+      height: 1.5em;
+      cursor: pointer;
+      fill: $secondaryColor;
+    }
+  }
+  &__nav {
+    display: flex;
+    gap: 30px;
+    &__link {
+      font-size: 1.2em;
+      font-weight: $medium;
+      color: $secondaryColor;
+      &:hover {
+        color: $additionalColor;
+        border-bottom: 2px solid $additionalColor;
+      }
+    }
+  }
+  &__button {
+    border: 3px solid $additionalColor;
+    font-size: 1.1em;
+    letter-spacing: 0.04em;
+    font-weight: 400;
+    padding: 5px 25px 5px 25px;
+    border-radius: 20px;
+    transition: transform ease-in 200ms;
+    color: $secondaryColor;
+    background-color: $primaryColor;
+    &:hover {
+      background-color: $additionalColor;
+      color: $secondaryColor;
+      transform: scale(1.1);
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    &__logo {
+      margin-top: 5px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      fill: $additionalColor;
+      transition: transform ease-in 200ms;
+      &:hover {
+        fill: $secondaryColor;
+        background-color: $additionalColor;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    &__mobile {
+      max-width: max-content;
+      &__menu {
+        display: none;
+      }
+    }
+  }
+}
+.active {
+  color: $additionalColor;
+}

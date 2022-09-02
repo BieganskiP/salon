@@ -1,0 +1,48 @@
+.contacts {
+  @include container;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-block: 20px;
+  &__header {
+    margin-block: 20px;
+  }
+  &__location {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block: 20px;
+  }
+  &__map {
+    width: 80%;
+    height: 400px;
+    margin-block: 20px;
+  }
+  &__address {
+    font-weight: $bold;
+  }
+  &__phone {
+    margin-block: 20px;
+    &-icon {
+      width: 17px;
+      height: 20px;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .contacts {
+    @include container;
+    flex-direction: column;
+    &__map {
+      width: 60%;
+      height: 400px;
+      margin-inline: 20px;
+    }
+    &__location {
+      flex-direction: row-reverse;
+    }
+  }
+}
